@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content planner kreator</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Studio kreator TikTok dan Reels</p>
+    <h1>Content planner</h1>
+    <p class="lead">Atur jadwal posting, pantau progres produksi, dan catat pemasukan endorsement di satu tempat.</p>
+    <ol class="stages" aria-label="Tahapan produksi">
+      <li class="s1">Ide</li><li class="s2">Take video</li><li class="s3">Editing</li><li class="s4">Tayang</li>
+    </ol>
+    <div class="hero-btns">
+      <button class="pri" id="addK">Konten baru</button>
+      <button class="alt" id="addE">Endorsement baru</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats" id="stats"></div>
+
+  <h2>Papan produksi</h2>
+  <div class="bar" id="filters"></div>
+  <div class="board" id="board"></div>
+
+  <section>
+    <h2>Endorsement</h2>
+    <div id="endo"></div>
+  </section>
+
+  <section>
+    <h2>Rekap pemasukan</h2>
+    <div class="two">
+      <div class="panel"><div class="meta">Pemasukan lunas per bulan</div><div class="bars" id="bars"></div></div>
+      <div class="panel"><div class="meta">Per brand</div><div id="brands"></div></div>
+    </div>
+  </section>
+
+  <p class="foot"><button class="sm" id="reset">Reset ke data contoh</button></p>
+</main>
+
+<dialog id="dK">
+  <form method="dialog" id="fK">
+    <h2 id="tK">Konten</h2>
+    <label>Judul<input name="judul" required></label>
+    <label>Platform<select name="platform"><option>TikTok</option><option>Reels</option></select></label>
+    <label>Status<select name="status"><option>Ide</option><option>Take Video</option><option>Editing</option><option>Tayang</option></select></label>
+    <label>Tanggal tayang<input type="date" name="tanggal" required></label>
+    <label>Endorsement terkait<select name="endoId" id="selE"></select></label>
+    <div class="fb"><button type="button" data-close>Batal</button><button class="pri">Simpan</button></div>
+  </form>
+</dialog>
+
+<dialog id="dE">
+  <form method="dialog" id="fE">
+    <h2 id="tE">Endorsement</h2>
+    <label>Brand<input name="brand" required></label>
+    <label>Nilai kontrak (Rp)<input type="number" name="nilai" min="0" step="50000" required></label>
+    <label>Deadline posting<input type="date" name="deadline" required></label>
+    <label>Status bayar<select name="statusBayar"><option>Belum dibayar</option><option>DP</option><option>Lunas</option></select></label>
+    <div class="fb"><button type="button" data-close>Batal</button><button class="pri">Simpan</button></div>
+  </form>
+</dialog>
+
+<script src="js/script.js"></script>
+</body>
+</html>
