@@ -1,0 +1,90 @@
+/* Variabel warna */
+:root {
+  --bg: #f5f6f8;
+  --card: #ffffff;
+  --text: #222831;
+  --muted: #6b7280;
+  --line: #dfe3e8;
+  --primary: #3b5bdb;
+  --green: #2f9e44;
+  --yellow: #f08c00;
+  --red: #e03131;
+}
+
+/* Dasar */
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 Arial, sans-serif; }
+.wrap { max-width: 1050px; margin: 0 auto; padding: 0 16px; }
+h1 { margin: 0; font-size: 28px; }
+h2 { font-size: 20px; margin: 0 0 10px; }
+.meta { font-size: 13px; color: var(--muted); }
+section { margin-top: 32px; }
+
+/* Header */
+.hero { background: var(--card); border-bottom: 1px solid var(--line); padding: 24px 0; margin-bottom: 20px; }
+.kicker { margin: 0 0 4px; color: var(--primary); font-weight: bold; font-size: 13px; }
+.lead { margin: 6px 0 12px; color: var(--muted); }
+.stages { display: flex; gap: 8px; list-style: none; padding: 0; margin: 0 0 14px; font-size: 13px; color: var(--muted); }
+.stages li:not(:last-child)::after { content: " >"; }
+.hero-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* Tombol dan input */
+button, select, input { font: inherit; color: inherit; }
+button { padding: 7px 14px; background: var(--card); border: 1px solid var(--line); border-radius: 6px; cursor: pointer; }
+button:hover { border-color: var(--primary); }
+.pri { background: var(--primary); border-color: var(--primary); color: #fff; }
+.alt { border-color: var(--primary); color: var(--primary); }
+.sm { padding: 2px 8px; font-size: 13px; }
+select, input { width: 100%; padding: 6px 8px; background: var(--card); border: 1px solid var(--line); border-radius: 6px; }
+
+/* Ringkasan */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 28px; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+.stat span { font-size: 13px; color: var(--muted); }
+.stat b { display: block; font-size: 20px; }
+
+/* Filter */
+.bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 14px; }
+.bar select { width: auto; }
+.pill.on { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+/* Papan */
+.board { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; align-items: start; }
+.col { background: #eceef2; border-radius: 8px; padding: 10px; }
+.col h3 { display: flex; justify-content: space-between; margin: 0 0 8px; font-size: 14px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 10px; margin-bottom: 8px; }
+.card.tt { border-left: 4px solid #12b5b5; }
+.card.ig { border-left: 4px solid #d6336c; }
+.card p { margin: 0; font-weight: bold; }
+.acts { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.empty { font-size: 13px; color: var(--muted); }
+
+/* Label deadline */
+.badge { display: inline-block; margin-top: 6px; padding: 1px 8px; border-radius: 10px; font-size: 12px; }
+.b-ok { background: #d3f9d8; color: var(--green); }
+.b-wr { background: #fff3bf; color: var(--yellow); }
+.b-er { background: #ffe3e3; color: var(--red); }
+.b-n { background: #eceef2; color: var(--muted); }
+
+/* Endorsement */
+.row { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr auto; gap: 10px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; }
+.row select { padding: 3px 6px; }
+
+/* Rekap */
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+.bars { display: flex; gap: 8px; align-items: flex-end; height: 140px; margin-top: 10px; }
+.bars div { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; text-align: center; font-size: 12px; }
+.bars i { display: block; background: var(--primary); border-radius: 4px 4px 0 0; min-height: 3px; margin-bottom: 4px; }
+.li { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.foot { margin: 28px 0 36px; }
+
+/* Form dialog */
+dialog { width: min(420px, 92vw); padding: 20px; border: 1px solid var(--line); border-radius: 8px; color: var(--text); }
+dialog::backdrop { background: rgba(0, 0, 0, 0.4); }
+label { display: block; margin-top: 10px; font-size: 13px; }
+label input, label select { margin-top: 4px; }
+.fb { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+
+/* HP */
+@media (max-width: 700px) { .row { grid-template-columns: 1fr 1fr; } }
